@@ -7,10 +7,12 @@ namespace CP2___MVC.Controllers
     public class UsersController : Controller
     {
         private readonly DataContext _dataContext;
+        private readonly ILogger<UsersController> _logger;
 
-        public UsersController(DataContext dataContext)
+        public UsersController(DataContext dataContext, ILogger<UsersController> logger)
         {
             _dataContext = dataContext;
+            _logger = logger;
         }
 
         public IActionResult Login()
