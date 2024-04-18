@@ -1,14 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace MvcLoginApp.Data
+namespace CP2___MVC.Data {
+public class DataContext : DbContext
 {
-    public class ApplicationDbContext : DbContext
-    {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-            : base(options)
-        {
-        }
 
-        public DbSet<User> Users { get; set; }
+    public DataContext(DbContextOptions<DataContext> options) : base(options)
+
+    {
     }
+
+    public DbSet<User> MVC_Usuarios { get; set; }
+
 }
+}
+
